@@ -1,7 +1,5 @@
-package org.example.mathematical;
+package org.example.Mathematical;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.function.BiFunction;
 import java.util.stream.IntStream;
 

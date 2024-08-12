@@ -1,4 +1,4 @@
-package org.example.Msc;
+package org.example.DSImpl;
 
 public class LinkedList {
 
