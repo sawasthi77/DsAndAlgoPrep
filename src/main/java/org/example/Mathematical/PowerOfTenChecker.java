@@ -1,3 +1,5 @@
+package org.example.Mathematical;
+
 public class PowerOfTenChecker {
 
     public static boolean isPowerOfTen(int num){

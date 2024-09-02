@@ -31,6 +31,6 @@ public class ReduceString {
     }
 
     public static void main(String[] args) {
-        System.out.println(reduceString("saumyaaAwaasthiiyaayy",2));
+        System.out.println(reduceString("saumyaa",2));
     }
 }
