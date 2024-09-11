@@ -1,4 +1,4 @@
-package org.example.DSImpl;
+package org.example.DSImpl.Queue;
 
 import java.util.NoSuchElementException;
 

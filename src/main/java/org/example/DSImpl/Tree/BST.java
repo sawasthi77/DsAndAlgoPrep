@@ -1,4 +1,4 @@
-package org.example.DSImpl;
+package org.example.DSImpl.Tree;
 
 public class BST {
 

@@ -1,4 +1,4 @@
-package org.example.DSImpl;
+package org.example.DSImpl.LinkedList;
 
 public class LinkedListInsertAtEnd {
     public static Node insertAtEnd(Node head, int new_data){
