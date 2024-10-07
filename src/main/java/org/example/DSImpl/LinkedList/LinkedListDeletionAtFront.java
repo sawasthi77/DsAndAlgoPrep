@@ -1,8 +1,7 @@
 package org.example.DSImpl.LinkedList;
 
 public class LinkedListDeletionAtFront {
-
-    public static org.example.DSImpl.Node removeNodeAtFront(org.example.DSImpl.Node head){
+    public static Nodef removeNodeAtFront(Nodef head){
         if(head == null){
             return null;
         }
@@ -12,8 +11,8 @@ public class LinkedListDeletionAtFront {
         return head;
     }
 
-    public static void printList(org.example.DSImpl.Node head){
-        org.example.DSImpl.Node curr = head;
+    public static void printList(Nodef head){
+       Nodef curr = head;
 
         while(curr != null){
             System.out.println(" " + curr.data);
@@ -23,13 +22,22 @@ public class LinkedListDeletionAtFront {
     }
 
     public static void main(String[] args) {
-        org.example.DSImpl.Node head = new org.example.DSImpl.Node(11);
-        head.next = new org.example.DSImpl.Node(13);
-        head.next.next = new org.example.DSImpl.Node(15);
+        Nodef head = new Nodef(11);
+        head.next = new Nodef(13);
+        head.next.next = new Nodef(15);
         System.out.println("Original LinkedList: ");
         printList(head);
 
         System.out.println("Modified LinkedList: ");
         printList(removeNodeAtFront(head));
+    }
+}
+
+class Nodef {
+    int data;
+    Nodef next;
+
+    Nodef(int data){
+        this.data = data;
     }
 }

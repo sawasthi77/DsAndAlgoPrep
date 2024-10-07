@@ -1,7 +1,15 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
@@ -57,6 +65,21 @@ class Student {
                 "name='" + name + '\'' +
                 ", rollno=" + rollno +
                 '}';
+    }
+
+    public void test() throws IOException {
+        try(Stream<String> stream = Files.lines(Paths.get("files.txt"), StandardCharsets.UTF_8)){
+            stream.forEach(System.out::println);
+        }
+    }
+
+    public void bTest() throws IOException {
+        try(BufferedReader br = new BufferedReader(new FileReader("file.txt"))){
+            String line;
+            while((line = br.readLine()) != null){
+                System.out.println(line);
+            }
+        }
     }
 
 }

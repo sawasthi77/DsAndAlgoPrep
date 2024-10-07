@@ -2,10 +2,10 @@ package org.example.DSImpl.LinkedList;
 
 public class LinkedList {
 
-    private Node head;
-    static void countNodes(Node node){
+    private Nodef head;
+    static void countNodes(Nodef node){
         int count = 0;
-        Node temp = node;
+        Nodef temp = node;
         while(temp != null){
             count ++;
             temp = temp.next;
@@ -18,13 +18,13 @@ public class LinkedList {
     }
 
     public void insert(int data){
-        Node newNode = new Node(data);
+        Nodef newNode = new Nodef(data);
 
         if(head == null){
             head = newNode;
         }
         else{
-            Node current = head;
+            Nodef current = head;
             while(current.next != null){
                 current = current.next;
             }
@@ -36,7 +36,7 @@ public class LinkedList {
 }
 
 class Node{
-    Node next;
+    Nodef next;
     int data;
 
     Node(int data){

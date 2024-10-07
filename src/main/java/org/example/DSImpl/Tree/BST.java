@@ -2,16 +2,6 @@ package org.example.DSImpl.Tree;
 
 public class BST {
 
-    class TreeNode{
-        int value;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int value){
-            this.value = value;
-        }
-    }
-
     private TreeNode root;
     public void put(int value){
         root = put(root, value);

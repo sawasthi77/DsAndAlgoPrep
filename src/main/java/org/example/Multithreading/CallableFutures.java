@@ -9,19 +9,16 @@ public class CallableFutures {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executor = Executors.newCachedThreadPool();
 
-        Future<Integer> future = executor.submit(new Callable<Integer>() {
-            @Override
-            public Integer call() throws Exception {
-                Random random = new Random();
-                int duration = random.nextInt();
-                if(duration > 2000){
-                    throw new IOException("Sleeping for too long");
-                }
-                System.out.println("Starting....");
-                Thread.sleep(duration);
-                System.out.println("Finished.....");
-                return duration;
+        Future<Integer> future = executor.submit(() -> {
+            Random random = new Random();
+            int duration = random.nextInt();
+            if(duration > 2000){
+                throw new IOException("Sleeping for too long");
             }
+            System.out.println("Starting....");
+            Thread.sleep(duration);
+            System.out.println("Finished.....");
+            return duration;
         });
 
         executor.shutdown();

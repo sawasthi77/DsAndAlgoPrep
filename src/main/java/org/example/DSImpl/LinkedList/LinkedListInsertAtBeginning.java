@@ -2,15 +2,15 @@ package org.example.DSImpl.LinkedList;
 
 public class LinkedListInsertAtBeginning {
 
-    public static Node insertAtTheBeginning(Node head, int new_data) {
-        Node newNode = new Node(new_data);
+    public static Nodef insertAtTheBeginning(Nodef head, int new_data) {
+        Nodef newNode = new Nodef(new_data);
 
         newNode.next = head;
         return newNode;
     }
 
-    public static void printList(Node head){
-        Node curr = head;
+    public static void printList(Nodef head){
+        Nodef curr = head;
 
         while (curr != null) {
             System.out.println(" " + curr.data);
@@ -20,8 +20,8 @@ public class LinkedListInsertAtBeginning {
     }
 
     public static void main(String[] args) {
-        Node head = new Node(2);
-        head.next = new Node(3);
+        Nodef head = new Nodef(2);
+        head.next = new Nodef(3);
 
         System.out.println("original linked list");
         printList(head);

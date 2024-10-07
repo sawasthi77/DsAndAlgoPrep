@@ -2,7 +2,7 @@ package org.example.DSImpl.LinkedList;
 
 public class LinkedListDeletionAtLast {
 
-    public static Node deleteAtEnd(Node head){
+    public static Nodef deleteAtEnd(Nodef head){
         if(head == null){
             return head;
         }
@@ -11,7 +11,7 @@ public class LinkedListDeletionAtLast {
             return null;
         }
 
-        Node pointer = head;
+        Nodef pointer = head;
 
         while(pointer.next.next != null){
             pointer = pointer.next;
@@ -21,8 +21,8 @@ public class LinkedListDeletionAtLast {
         return head;
     }
 
-    public static void printList(Node head){
-        Node curr = head;
+    public static void printList(Nodef head){
+        Nodef curr = head;
 
         while(curr != null){
             System.out.println(" " + curr.data);
@@ -32,9 +32,9 @@ public class LinkedListDeletionAtLast {
     }
 
     public static void main(String[] args) {
-        Node head = new Node(11);
-        head.next = new Node(13);
-        head.next.next = new Node(15);
+        Nodef head = new Nodef(11);
+        head.next = new Nodef(13);
+        head.next.next = new Nodef(15);
         System.out.println("Original LinkedList: ");
         printList(head);
 

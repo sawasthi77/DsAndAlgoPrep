@@ -2,7 +2,7 @@ package org.example.DSImpl.LinkedList;
 
 public class LinkedListDeleteAtPos {
 
-    public static Node deleteAtPosition(Node head, int position){
+    public static Nodef deleteAtPosition(Nodef head, int position){
         if(position < 1){
             System.out.println("Invalid position");
         }
@@ -12,8 +12,8 @@ public class LinkedListDeleteAtPos {
             return head;
         }
 
-       Node temp = head;
-        Node prev = null;
+       Nodef temp = head;
+        Nodef prev = null;
 
         for(int i = 0; temp != null && i < position; i++){
             prev = temp;

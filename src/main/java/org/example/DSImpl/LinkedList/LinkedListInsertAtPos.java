@@ -2,11 +2,11 @@ package org.example.DSImpl.LinkedList;
 
 public class LinkedListInsertAtPos {
 
-    public static Node getNode(int data){
-        return new Node(data);
+    public static Nodef getNode(int data){
+        return new Nodef(data);
     }
-    public static Node insertAtPosition(Node head, int position, int new_data){
-        Node newNode = getNode(new_data);
+    public static Nodef insertAtPosition(Nodef head, int position, int new_data){
+        Nodef newNode = getNode(new_data);
        if(position < 1){
            System.out.println("invalid position");
        }
@@ -31,8 +31,8 @@ public class LinkedListInsertAtPos {
        return head;
     }
 
-    public static void printList(Node node){
-        Node curr = node;
+    public static void printList(Nodef node){
+        Nodef curr = node;
 
         while(curr != null){
             System.out.println(" " + curr.data);
@@ -42,7 +42,7 @@ public class LinkedListInsertAtPos {
     }
 
     public static void main(String[] args) {
-        Node head = getNode(2);
+        Nodef head = getNode(2);
         head.next = getNode(4);
         head.next.next = getNode(5);
 
